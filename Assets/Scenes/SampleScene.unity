@@ -720,11 +720,9 @@ MonoBehaviour:
   camera: {fileID: 963194227}
   score: 0
   liv: 3
-  x: 0
   loseScreen: {fileID: 135930455}
   "po\xE4ngtime": 0
   "gepo\xE4ng": 0
-  numbers: []
   skortext: {fileID: 248346952}
   musik: {fileID: 963194229}
   ljud: {fileID: 963194229}

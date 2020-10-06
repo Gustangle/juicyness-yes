@@ -15,11 +15,9 @@ public class spel : MonoBehaviour
     public Camera camera;
     public int score;
     public int liv;
-    public float x;
     public GameObject loseScreen;
     public float poängtime = 5;
     public bool gepoäng;
-    public Sprite[] numbers;
     public Text skortext;
     public AudioSource musik;
     public AudioSource ljud;
@@ -35,8 +33,7 @@ public class spel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        helst.transform.position += new Vector3(1,1,0) * Time.deltaTime;
-        x += Time.deltaTime;
+        helst.transform.position += new Vector3(1, 1, 0) * Time.deltaTime;
         skortext.text = (string)score.ToString();
         timer += Time.deltaTime;
         if (timer > Random.Range(10, 50)) 
@@ -50,11 +47,7 @@ public class spel : MonoBehaviour
             gepoäng = true;
         }
 
-        if (x > 10)
-        {
-            x = x % 10;
-            print("det funkar");
-        }
+       
         if (helst.transform.position.y > 10)
         {
             helst.transform.position = new Vector3(transform.position.x, 0, 0);
@@ -67,9 +60,7 @@ public class spel : MonoBehaviour
             print("haha du förlorade!!!!?!");
             loseScreen.SetActive(true);
         }
-        print("hundra: " + score % 100);
-        print("tio: " + score % 10);
-        print("ett: " + score % 1);
+       
         helst.transform.position += new Vector3(1, 1, 0) * Time.deltaTime;
         if (Input.GetMouseButtonDown(0)) //Du klickar en knapp
         {
