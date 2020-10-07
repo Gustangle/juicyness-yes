@@ -28,7 +28,6 @@ public class spel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print(highScore);
         highScore = PlayerPrefs.GetInt(highScoreKey, 0);
 
         ljud = GetComponent<AudioSource>();
@@ -63,7 +62,7 @@ public class spel : MonoBehaviour
             musik.Stop();
             ljud.PlayOneShot(ljud.clip);
             Time.timeScale = 0;
-            print("haha du förlorade!!!!?!");
+            print("haha du förlorade!?!?!?!?!?!?!?");
             loseScreen.SetActive(true);
         }
        
@@ -81,7 +80,6 @@ public class spel : MonoBehaviour
                     ljud.PlayOneShot(ljud.clip);
                     Destroy(nymull);
                     full[i] = false;
-                    print("test");
                     if (gepoäng == true)
                     {
                         if (poängtime > 3)
