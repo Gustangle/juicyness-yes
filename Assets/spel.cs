@@ -13,7 +13,6 @@ public class spel : MonoBehaviour
     public GameObject helst;
     public float range;
     public Camera camera;
-    public int score;
     public int liv;
     public GameObject loseScreen;
     public float poängtime = 5;
@@ -22,9 +21,16 @@ public class spel : MonoBehaviour
     public AudioSource musik;
     public AudioSource ljud;
 
+    public int score = 0;
+    public int highScore = 0;
+    string highScoreKey = "HighScore";
+
     // Start is called before the first frame update
     void Start()
     {
+        print(highScore);
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+
         ljud = GetComponent<AudioSource>();
         helst = new GameObject();
         loseScreen.SetActive(false);
@@ -108,6 +114,14 @@ public class spel : MonoBehaviour
         if (gepoäng)
         {
             poängtime -= Time.deltaTime;
+        }
+    }
+    private void OnDisable()
+    {
+        if (score > highScore)
+        {
+            PlayerPrefs.SetInt(highScoreKey, score);
+            PlayerPrefs.Save();
         }
     }
 }
