@@ -12,7 +12,7 @@ public class spel : MonoBehaviour
     public GameObject nymull;
     public GameObject helst;
     public float range;
-    public Camera camera;
+    public Camera Kamera;
     public int score;
     public int liv;
     public GameObject loseScreen;
@@ -33,10 +33,11 @@ public class spel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         helst.transform.position += new Vector3(1, 1, 0) * Time.deltaTime;
         skortext.text = (string)score.ToString();
         timer += Time.deltaTime;
-        if (timer > Random.Range(10, 50)) 
+        if (timer > Random.Range(5, 50)) 
         {
             print("skapa mullvad");
             timer = 0;
