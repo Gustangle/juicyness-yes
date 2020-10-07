@@ -146,18 +146,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135930455}
-  m_LocalRotation: {x: 0.17720208, y: 0.07127912, z: 0.011059564, w: 0.98152757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1926341797}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.26, y: 8.82, z: 2.87}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 319.59, y: 207.82}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135930457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,8 +717,7 @@ MonoBehaviour:
   nymull: {fileID: 0}
   helst: {fileID: 0}
   range: 2
-  camera: {fileID: 963194227}
-  score: 0
+  camera: {fileID: 0}
   liv: 3
   loseScreen: {fileID: 135930455}
   "po\xE4ngtime": 0
@@ -726,6 +725,8 @@ MonoBehaviour:
   skortext: {fileID: 248346952}
   musik: {fileID: 963194229}
   ljud: {fileID: 963194229}
+  score: 0
+  highScore: 0
 --- !u!82 &841624997
 AudioSource:
   m_ObjectHideFlags: 0
